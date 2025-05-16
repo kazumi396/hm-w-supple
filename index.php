@@ -9,7 +9,7 @@
     <!-- top-consept -->
     <section class="top-consept u-ptb">
         <div class="l-container-s">
-            <h2 class="c-title-level2 c-title-level2--center">consept</h2>
+            <h2 class="c-title-level2 c-title-level2--center">concept</h2>
 
             <div class="u-mt">
                 <div class="top-consept-img">
@@ -25,7 +25,7 @@
                 </p>
 
                 <div class="u-mt">
-                    <a href="consept.html" class="c-button c-button--center">more</a>
+                    <a href="<?php echo get_permalink(8); ?>" class="c-button c-button--center">more</a>
                 </div>
             </div>
         </div>
