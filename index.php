@@ -153,7 +153,12 @@
                         <?php while (have_posts()) : the_post(); ?>
                         <article class="c-post">
                             <a href="<?php the_permalink(); ?>" class="c-post-thumbnail">
+                                <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('medium'); ?>
+                                <?php else: ?>
+                                <img src='https://placehold.jp/600x400.png' width='600' height='400' alt=''
+                                    decoding='async' />
+                                <?php endif; ?>
                             </a>
                             <div class="c-post-date">
                                 <time datetime="<?php the_time('Y-m-d'); ?>"
@@ -164,34 +169,6 @@
                             </h3>
                         </article>
                         <?php endwhile; ?>
-
-                        <!-- <article class="c-post">
-                            <a href="single.html" class="c-post-thumbnail">
-                                <img width="600" height="369"
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/img/thumb-post.jpg' ); ?>"
-                                    alt="〇〇の写真。" loading="lazy" />
-                            </a>
-                            <div class="c-post-date">
-                                <time datetime="2024-01-01" class="c-date">2024/01/01</time>
-                            </div>
-                            <h3 class="c-post-title">
-                                <a href="single.html">講習会を開催しました。</a>
-                            </h3>
-                        </article>
-
-                        <article class="c-post">
-                            <a href="single.html" class="c-post-thumbnail">
-                                <img width="600" height="369"
-                                    src="<?php echo esc_url( get_template_directory_uri() . '/img/thumb-post.jpg' ); ?>"
-                                    alt="〇〇の写真。" loading="lazy" />
-                            </a>
-                            <div class="c-post-date">
-                                <time datetime="2024-01-01" class="c-date">2024/01/01</time>
-                            </div>
-                            <h3 class="c-post-title">
-                                <a href="single.html">講習会を開催しました。</a>
-                            </h3>
-                        </article> -->
                     </div>
                 </div>
                 <?php endif; ?>
