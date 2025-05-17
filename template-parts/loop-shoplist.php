@@ -1,5 +1,9 @@
 <div class="shoplist-item-img">
-    <img src="img/pic-shoplist-kitasenju.jpg" alt="北千住店の外観の写真。〇〇な雰囲気の外観です。" width="648" height="410" loading="lazy" />
+    <?php if (has_post_thumbnail()): ?>
+    <?php the_post_thumbnail(); ?>
+    <?php else: ?>
+    <img src='https://placehold.jp/600x400.png' width='600' height='400' alt='' decoding='async' />
+    <?php endif; ?>
 </div>
 
 <div class="shoplist-item-info">
