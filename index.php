@@ -37,14 +37,13 @@
         <div class="l-container">
             <div class="top-menu-inner">
                 <h2 class="c-title-level2 c-title-level2--white c-title-level2--center">menu</h2>
-
                 <div class="top-menu-body u-mt">
                     <section class="top-menu-block">
                         <h3 class="top-menu-list-title">drip</h3>
 
                         <ul class="top-menu-list">
                             <li class="top-menu-item">
-                                <span class="top-menu-item-name">エントランスブレンド</span>
+                                <span class="top-menu-item-name"><?php the_title(); ?></span>
                                 <span class="top-menu-item-price">¥800</span>
                             </li>
                             <li class="top-menu-item">
@@ -111,7 +110,8 @@
                 </div>
 
                 <div class="u-mt">
-                    <a href="menu.html" class="c-button c-button--white c-button--center">more</a>
+                    <a href="<?php echo esc_url(get_post_type_archive_link('menu')); ?>"
+                        class="c-button c-button--white c-button--center">more</a>
                 </div>
             </div>
         </div>
