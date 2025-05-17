@@ -41,36 +41,22 @@
                     <section class="top-menu-block">
                         <h3 class="top-menu-list-title">drip</h3>
 
+                        <?php
+                        $args = [
+                            'post_type' => 'menu',
+                            'posts_per_page' => -1
+                        ];
+                        $menu_query = new WP_Query($args);
+                        if ($menu_query->have_posts()): ?>
                         <ul class="top-menu-list">
+                            <?php while ($menu_query->have_posts()) : $menu_query->the_post(); ?>
                             <li class="top-menu-item">
                                 <span class="top-menu-item-name"><?php the_title(); ?></span>
-                                <span class="top-menu-item-price">¥800</span>
+                                <span class="top-menu-item-price">¥<?php echo esc_html(get_field('price')); ?></span>
                             </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">エチオピア ウォッシュド</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">エチオピア ナチュラル</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">グアテマラ</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">ブラジル</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">タンザニア</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name">フスクブレンド</span>
-                                <span class="top-menu-item-price">¥800</span>
-                            </li>
+                            <?php endwhile; ?>
                         </ul>
+                        <?php endif; ?>
                     </section>
 
                     <section class="top-menu-block">
