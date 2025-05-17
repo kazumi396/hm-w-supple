@@ -13,9 +13,11 @@
         <div class="l-container-s">
             <article class="single-article">
                 <div class="single-thumbnail">
-                    <img width="1920" height="1180"
-                        src="<?php echo esc_url( get_template_directory_uri() . '/img/single-thumb-post.jpg' ); ?>"
-                        alt="..." loading="lazy" />
+                    <?php if (has_post_thumbnail()): ?>
+                    <?php the_post_thumbnail(); ?>
+                    <?php else: ?>
+                    <img src='https://placehold.jp/600x400.png' width='600' height='400' alt='' decoding='async' />
+                    <?php endif; ?>
                 </div>
 
                 <div class="single-date">

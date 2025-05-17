@@ -154,7 +154,7 @@
                         <article class="c-post">
                             <a href="<?php the_permalink(); ?>" class="c-post-thumbnail">
                                 <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('medium'); ?>
+                                <?php the_post_thumbnail(); ?>
                                 <?php else: ?>
                                 <img src='https://placehold.jp/600x400.png' width='600' height='400' alt=''
                                     decoding='async' />
