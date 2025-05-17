@@ -122,7 +122,8 @@
             </div>
 
             <div class="u-mt">
-                <a href="shoplist.html" class="c-button c-button--center">more</a>
+                <a href="<?php echo esc_url(get_post_type_archive_link('shoplist')); ?>"
+                    class="c-button c-button--center">more</a>
             </div>
         </div>
     </section>
