@@ -8,20 +8,8 @@
     <meta name="format-detection" content="telephone=no" />
 
     <!-- favicon/webclipicon -->
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" href="webclip.png" />
-
-    <!-- ogp -->
-    <meta property="og:site_name" content="SUPPLE" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="SUPPLE - コーヒー好きによるコーヒー好きのためのカフェ -" />
-    <meta property="og:description" content="SUPPLEはコーヒー好きのスタッフによるコーヒー好きのためのコーヒーだけを提供するこだわりのカフェです。" />
-    <meta property="og:image" content="URL(絶対パス)" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="SUPPLEはコーヒー好きのスタッフによるコーヒー好きのためのコーヒーだけを提供するこだわりのカフェです。" />
-    <meta name="twitter:image:src" content="URL(絶対パス)" />
+    <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() . '/favicon.ico' ); ?>" />
+    <link rel="apple-touch-icon" href="<?php echo esc_url( get_template_directory_uri() . '/webclip.png' ); ?>" />
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
