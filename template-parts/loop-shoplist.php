@@ -11,6 +11,8 @@
     <ul class="shoplist-item-detail">
         <li class="shoplist-item-detail-item">営業時間／<?php the_field('time'); ?></li>
         <li class="shoplist-item-detail-item">席数／<?php the_field('number'); ?>席</li>
-        <li class="shoplist-item-detail-item">喫煙／可</li>
+        <li class="shoplist-item-detail-item">
+            喫煙／<?php echo get_field('smoking') ? '可' : '不可'; ?>
+        </li>
     </ul>
 </div>
