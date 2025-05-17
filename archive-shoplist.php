@@ -20,7 +20,7 @@
                 </section>
                 <?php endwhile; ?>
 
-                <section class="shoplist-item">
+                <!-- <section class="shoplist-item">
                     <div class="shoplist-item-img">
                         <img src="img/pic-shoplist-daikanyama.jpg" alt="代官山店の外観の写真。〇〇な雰囲気の外観です。" width="648"
                             height="410" loading="lazy" />
@@ -118,7 +118,7 @@
                             <li class="shoplist-item-detail-item">喫煙／可</li>
                         </ul>
                     </div>
-                </section>
+                </section> -->
             </div>
             <?php endif; ?>
         </div>
