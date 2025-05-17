@@ -57,6 +57,7 @@
                             <?php endwhile; ?>
                         </ul>
                         <?php endif; ?>
+                        <?php wp_reset_postdata(); ?>
                     </section>
 
                     <section class="top-menu-block">
