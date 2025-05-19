@@ -113,16 +113,22 @@
             <h2 class="c-title-level2 c-title-level2--center">shop list</h2>
             <p class="top-shoplist-copy"><span>首都圏を中心に6店舗展開しています。</span><span>お近くの店舗でお待ちしています。</span></p>
 
+            <?php
+                $args = array(
+                    'post_type' => 'shoplist',
+                    'posts_per_page' => -1,
+                );
+                $shoplist_query = new WP_Query($args);
+                if ($shoplist_query->have_posts()): ?>
             <div class="u-mt">
                 <ul class="top-shoplist-list">
-                    <li class="top-shoplist-item">北千住店</li>
-                    <li class="top-shoplist-item">代官山店</li>
-                    <li class="top-shoplist-item">新宿店</li>
-                    <li class="top-shoplist-item">八王子店</li>
-                    <li class="top-shoplist-item">銀座店</li>
-                    <li class="top-shoplist-item">渋谷店</li>
+                    <?php while ($shoplist_query->have_posts()) : $shoplist_query->the_post(); ?>
+                    <li class="top-shoplist-item"><?php the_title(); ?></li>
+                    <?php endwhile; ?>
                 </ul>
             </div>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
 
             <div class="u-mt">
                 <a href="<?php echo esc_url(get_post_type_archive_link('shoplist')); ?>"
