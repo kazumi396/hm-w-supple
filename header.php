@@ -41,6 +41,15 @@
             shop</a>
 
         <nav class="header-nav">
+            <?php
+            $args = [
+                'menu' => 'global-navigation',
+                'menu_class' => 'header-list',
+                'container' => false,
+            ];
+            wp_nav_menu($args);
+            ?>
+
             <ul class="header-list">
                 <li class="header-item">
                     <a href="consept.html" class="header-link">concept</a>
