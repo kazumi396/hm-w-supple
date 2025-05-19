@@ -598,7 +598,9 @@ component > instagram
 layout > container
 ------------------------------
 */
-.l-container-l, .l-container, .l-container-s {
+.l-container-l,
+.l-container,
+.l-container-s {
   width: 90%;
   margin: 0 auto;
 }
@@ -1064,7 +1066,7 @@ page > menu > menu
 }
 
 @media screen and (min-width: 768px) {
-  .menu-item {
+  .archive-menu-style .menu-item {
     display: grid;
     grid-template-columns: 280px 1fr;
     align-items: center;
