@@ -9,6 +9,18 @@ add_theme_support('post-thumbnails');
 */
 add_theme_support('menus');
 
+/**
+* グローバルメニューの<li> に .header-item を付ける
+*/
+add_filter('nav_menu_css_class', 'custom_nav_menu_classes', 100, 2);
+function custom_nav_menu_classes($classes, $item) {
+    $new_classes = array('header-item');
+    if (in_array('current-menu-item', $classes)) {
+        $new_classes[] = 'current-menu-item';
+    }
+    return $new_classes;
+};
+
 
 /**
 * セキュリティ対策
