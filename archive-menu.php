@@ -19,7 +19,7 @@
             <div class="u-mt">
                 <div class="menu-list">
                     <?php while (have_posts()) : the_post(); ?>
-                    <section class="menu-item">
+                    <section class="top-menu-block archive-menu-style menu-item">
                         <?php get_template_part('template-parts/loop', 'menu'); ?>
                     </section>
                     <?php endwhile; ?>
