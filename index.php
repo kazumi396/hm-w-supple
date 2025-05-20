@@ -34,17 +34,16 @@
         <?php endif; ?>
 
         <!-- pagination -->
-        <nav class="c-pagination">
-            <a href="index.html" class="c-pagination-item c-pagination-item--prev"><span
-                    class="u-visually-hidden">前のページ</span></a>
-            <a href="index.html" class="c-pagination-item">1<span class="u-visually-hidden">ページ目</span></a>
-            <span class="c-pagination-item is-pagination-active"><span class="u-visually-hidden">現在のページ：</span>2<span
-                    class="u-visually-hidden">ページ目</span></span>
-            <span class="c-pagination-item">…</span>
-            <a href="index.html" class="c-pagination-item">10<span class="u-visually-hidden">ページ目</span></a>
-            <a href="index.html" class="c-pagination-item c-pagination-item--next"><span
-                    class="u-visually-hidden">次のページ</span></a>
-        </nav>
+        <?php
+				the_posts_pagination(
+					array(
+						'mid_size'           => 1,
+						'prev_text'          => '',
+						'next_text'          => '',
+						'screen_reader_text' => '…',
+					)
+				);
+			?>
         <!-- end pagination -->
     </div>
 </div>
