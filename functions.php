@@ -10,6 +10,19 @@ add_theme_support('post-thumbnails');
 add_theme_support('menus');
 
 /**
+ * メニュー
+ */
+function register_my_menus() {
+	register_nav_menus(
+		array(
+			'header - menu' => 'ヘッダーメニュー',
+			'footer - menu' => 'フッターメニュー',
+		)
+	);
+}
+add_action( 'after_setup_theme', 'register_my_menus' );
+
+/**
 * グローバルメニューの<li> に .header-item を付ける
 */
 add_filter('nav_menu_css_class', 'custom_nav_menu_classes', 100, 2);
