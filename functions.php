@@ -33,6 +33,14 @@ function custom_nav_menu_classes($classes, $item) {
     return $new_classes;
 };
 
+/**
+ * ブロックエディタにCSS適応
+ */
+function my_editor_suport() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'after_setup_theme', 'my_editor_suport' );
 
 /**
 * セキュリティ対策
