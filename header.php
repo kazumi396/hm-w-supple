@@ -44,7 +44,7 @@
         <nav class="header-nav">
             <?php
             $args = [
-                'menu' => 'global-navigation',
+                'menu' => 'header',
                 'menu_class' => 'header-list',
                 'container' => 'nav',
             ];
