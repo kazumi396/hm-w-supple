@@ -14,16 +14,16 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap"
+        rel="stylesheet" />
 
     <!-- css -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
 
     <!-- js -->
-    <?php
-    wp_enqueue_style('google-web-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP&display=swap');
-    wp_enqueue_script('supple-main', get_template_directory_uri() . '/js/main.js');
-    wp_head();
-    ?>
+    <script src="<?php echo esc_url( get_template_directory_uri() . '/js/main.js' ); ?>" defer></script>
+
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
