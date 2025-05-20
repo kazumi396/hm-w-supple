@@ -1066,7 +1066,7 @@ page > menu > menu
 }
 
 @media screen and (min-width: 768px) {
-  .archive-menu-style .menu-item {
+  .archive-menu-style.menu-item {
     display: grid;
     grid-template-columns: 280px 1fr;
     align-items: center;
