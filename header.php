@@ -30,12 +30,13 @@
     <?php wp_body_open(); ?>
     <!-- header -->
     <header class="header">
-        <h1 class="header-logo">
+        <?php $tag = ( is_home() || is_front_page() ) ? 'h1' : 'p'; ?>
+        <<?php echo $tag; ?> class="header-logo">
             <a href="<?php echo esc_url( home_url( '' ) ); ?>">
                 <img src="<?php echo esc_url( get_template_directory_uri() . '/img/logo.svg' ); ?>" width="200"
                     height="26" alt="supple" />
             </a>
-        </h1>
+        </<?php echo $tag; ?>>
 
         <a href="https://www.google.com/" class="header-onlineshop" target="_blank" rel="noopener noreferrer">online
             shop</a>
@@ -45,28 +46,10 @@
             $args = [
                 'menu' => 'global-navigation',
                 'menu_class' => 'header-list',
-                'container' => false,
+                'container' => 'nav',
             ];
             wp_nav_menu($args);
             ?>
-
-            <ul class="header-list">
-                <li class="header-item">
-                    <a href="consept.html" class="header-link">concept</a>
-                </li>
-
-                <li class="header-item">
-                    <a href="menu.html" class="header-link">menu</a>
-                </li>
-
-                <li class="header-item">
-                    <a href="shoplist.html" class="header-link">shoplist</a>
-                </li>
-
-                <li class="header-item">
-                    <a href="blog.html" class="header-link">blog&news</a>
-                </li>
-            </ul>
         </nav>
     </header>
     <!-- end header -->
