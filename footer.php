@@ -53,16 +53,22 @@
             </a>
         </div>
 
+        <?php
+                $args = array(
+                    'post_type' => 'shoplist',
+                    'posts_per_page' => -1,
+                );
+                $shoplist_query = new WP_Query($args);
+                if ($shoplist_query->have_posts()): ?>
         <nav class="footer-shop-nav">
             <ul class="footer-shop-list">
-                <li class="footer-shop-item">北千住店</li>
-                <li class="footer-shop-item">代官山店</li>
-                <li class="footer-shop-item">新宿店</li>
-                <li class="footer-shop-item">八王子店</li>
-                <li class="footer-shop-item">銀座店</li>
-                <li class="footer-shop-item">渋谷店</li>
+                <?php while ($shoplist_query->have_posts()) : $shoplist_query->the_post(); ?>
+                <li class="footer-shop-item"><?php the_title(); ?></li>
+                <?php endwhile; ?>
             </ul>
         </nav>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
 
         <div class="footer-company-info">
             <span>株式会社 SUPPLE</span>
