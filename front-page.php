@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main>
     <!-- top-kv -->
-    <?php if (is_home()): ?>
+    <?php if ( is_home() || is_front_page() ) :?>
     <div class="top-kv"></div>
     <?php endif; ?>
     <!-- end top-kv -->
@@ -143,10 +143,17 @@
         <section class="u-ptb">
             <div class="l-container-s">
                 <h2 class="c-title-level2 c-title-level2--center">blog & news</h2>
-                <?php if (have_posts()): ?>
+
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 3,
+                );
+                $blog_query = new WP_Query($args);
+                if ($blog_query->have_posts()): ?>
                 <div class="u-mt">
                     <div class="c-posts c-posts--col3">
-                        <?php while (have_posts()) : the_post(); ?>
+                        <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
                         <article class="c-post">
                             <a href="<?php the_permalink(); ?>" class="c-post-thumbnail">
                                 <?php if (has_post_thumbnail()): ?>
@@ -160,16 +167,19 @@
                                 <time datetime="<?php the_time('Y-m-d'); ?>"
                                     class="c-date"><?php the_time('Y/n/j'); ?></time>
                             </div>
-                            <h3 class="c-post-title">
-                                <a href="single.html"><?php echo esc_html(get_the_title()); ?></a>
-                            </h3>
+                            <h2 class="c-post-title">
+                                <a href="<?php the_permalink(); ?>"><?php echo esc_html(get_the_title()); ?></a>
+                            </h2>
                         </article>
                         <?php endwhile; ?>
                     </div>
                 </div>
                 <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
+
                 <div class="u-mt">
-                    <a href="blog.html" class="c-button c-button--center">more</a>
+                    <a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>"
+                        class="c-button c-button--center">more</a>
                 </div>
             </div>
         </section>
