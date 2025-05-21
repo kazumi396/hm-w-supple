@@ -18,7 +18,7 @@
         rel="stylesheet" />
 
     <!-- css -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
+    <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() . '/css/style.css' ); ?>" />
 
     <!-- js -->
     <script src="<?php echo esc_url( get_template_directory_uri() . '/js/main.js' ); ?>" defer></script>
