@@ -1221,6 +1221,45 @@ page > shoplist > shoplist
   }
 }
 
+.c-search {
+  margin-bottom: 40px;
+}
+
+.c-search-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.c-search-form-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+.c-search-form-text input,
+.c-search-form-select select {
+  padding: 8px;
+  border: 1px solid #a2a09e;
+}
+
+.c-search-form-text {
+  min-width: 240px;
+}
+@media screen and (min-width: 768px) {
+  .c-search-form-text {
+    min-width: 260px;
+  }
+}
+
+.c-search-button input {
+  padding: 4px 24px;
+  font-weight: bold;
+  color: var(--color-font-white);
+  background-color: var(--color-bg-black);
+  height: 100%;
+}
+
 /*!
 page > single > single-article
 ------------------------------
