@@ -16,7 +16,11 @@
             <p class="menu-head-text02"><span>SUPPLEでは上質なコーヒー豆を</span><span>世界中から直接輸入しています。</span></p>
 
             <?php
-            $method_terms = get_terms(['taxonomy' => 'method' ]);
+            $method_terms = get_terms([
+                'taxonomy' => 'method',
+                'orderby' => 'id',
+                'order' => 'ASC',
+             ]);
             if ( !empty($method_terms)):
             ?>
             <div class="u-mt menu-block-wrap">
