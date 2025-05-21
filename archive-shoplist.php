@@ -24,6 +24,8 @@
                 </section>
                 <?php endwhile; ?>
             </div>
+            <?php else: ?>
+            <p class="c-search-noresult">検索結果にヒットする店舗はありません。</p>
             <?php endif; ?>
         </div>
     </div>
