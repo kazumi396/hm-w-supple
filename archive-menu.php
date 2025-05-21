@@ -34,6 +34,8 @@
                         $args = [
                             'post_type' => 'menu',
                             'posts_per_page' => -1,
+                            'orderby' => 'id',
+                            'order' => 'ASC',
                         ];
                         $taxquerysp = ['relation' => 'AND'];
                         $taxquerysp[] = [
