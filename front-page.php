@@ -50,6 +50,8 @@
                         $args = array(
                             'post_type' => 'menu',
                             'posts_per_page' => -1,
+                            'orderby' => 'ID',
+                            'order' => 'ASC',
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'method',
