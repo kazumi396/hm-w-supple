@@ -1058,6 +1058,7 @@ page > menu > menu
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 40px;
+  margin-top: 24px;
 }
 @media screen and (min-width: 768px) {
   .menu-list {
@@ -1066,7 +1067,8 @@ page > menu > menu
 }
 
 @media screen and (min-width: 768px) {
-  .archive-menu-style.menu-item {
+  .archive-menu-style.menu-item,
+  .tax-menu-item {
     display: grid;
     grid-template-columns: 280px 1fr;
     align-items: center;
@@ -1109,6 +1111,16 @@ page > menu > menu
 @media screen and (min-width: 768px) {
   .menu-item-description {
     margin-top: 24px;
+  }
+}
+
+.menu-title {
+  font-size: 18px;
+  font-family: var(--font-family-english);
+}
+@media screen and (min-width: 768px) {
+  .menu-title {
+    font-size: 22px;
   }
 }
 
