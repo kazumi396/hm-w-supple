@@ -38,8 +38,13 @@
             <div class="top-menu-inner">
                 <h2 class="c-title-level2 c-title-level2--white c-title-level2--center">menu</h2>
                 <div class="top-menu-body u-mt">
+                    <?php
+                    $method_slugs = ['drip', 'espresso'];
+                    foreach ($method_slugs as $slug):
+                    ?>
+
                     <section class="top-menu-block">
-                        <h3 class="top-menu-list-title">drip</h3>
+                        <h3 class="top-menu-list-title"><?php echo esc_html($slug); ?></h3>
 
                         <?php
                         $args = array(
@@ -49,42 +54,13 @@
                                 array(
                                     'taxonomy' => 'method',
                                     'field' => 'slug',
-                                    'terms' => array('drip'),
+                                    'terms' => array($slug),
                                 ),
                             ),
                         );
                         $menu_query = new WP_Query($args);
                         if ($menu_query->have_posts()): ?>
-                        <ul class="top-menu-list">
-                            <?php while ($menu_query->have_posts()) : $menu_query->the_post(); ?>
-                            <li class="top-menu-item">
-                                <span class="top-menu-item-name"><?php the_title(); ?></span>
-                                <span class="top-menu-item-price">¥<?php echo esc_html(get_field('price')); ?></span>
-                            </li>
-                            <?php endwhile; ?>
-                        </ul>
-                        <?php endif; ?>
-                        <?php wp_reset_postdata(); ?>
 
-                    </section>
-
-                    <section class="top-menu-block">
-                        <h3 class="top-menu-list-title">espresso</h3>
-
-                        <?php
-                        $args = array(
-                            'post_type' => 'menu',
-                            'posts_per_page' => -1,
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'method',
-                                    'field' => 'slug',
-                                    'terms' => array('espresso'),
-                                ),
-                            ),
-                        );
-                        $menu_query = new WP_Query($args);
-                        if ($menu_query->have_posts()): ?>
                         <ul class="top-menu-list">
                             <?php while ($menu_query->have_posts()) : $menu_query->the_post(); ?>
                             <li class="top-menu-item">
@@ -96,6 +72,7 @@
                         <?php endif; ?>
                         <?php wp_reset_postdata(); ?>
                     </section>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="u-mt">
