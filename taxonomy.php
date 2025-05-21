@@ -23,13 +23,17 @@ $method = get_term_by('slug', $method_slug, 'method');
 
             <div class="u-mt">
                 <div class="menu-block">
-                    <h2 class="menu-title"><?php single_term_title(''); ?></h2>
+                    <h2 class="menu-title">
+                        <span><?php echo strtoupper($method->slug); ?></span>
+                    </h2>
                     <div class="menu-list">
+                        <?php if (have_posts()): ?>
                         <?php while (have_posts()) : the_post(); ?>
-                        <section class="menu-item">
+                        <section class="tax-menu-item">
                             <?php get_template_part('template-parts/loop', 'menu'); ?>
                         </section>
                         <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
