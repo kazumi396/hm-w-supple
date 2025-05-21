@@ -12,6 +12,10 @@
     <!-- shoplist -->
     <div class="u-ptb">
         <div class="l-container-l">
+            <div class="c-search">
+                <p class="c-search-title">店舗検索</p>
+                <?php get_search_form(); ?>
+            </div>
             <?php if (have_posts()): ?>
             <div class="shoplist-list">
                 <?php while (have_posts()) : the_post(); ?>
