@@ -1124,6 +1124,17 @@ page > menu > menu
   }
 }
 
+.menu-block-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+@media screen and (min-width: 768px) {
+  .menu-block-wrap {
+    gap: 80px;
+  }
+}
+
 /*!
 page > shoplist > shoplist
 ------------------------------
