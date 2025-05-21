@@ -237,6 +237,11 @@ body {
 editor-style
 ------------------------------
 */
+h1 {
+  font-size: 26px;
+  margin: 8px 0 0;
+}
+
 h2 {
   font-size: 24px;
   margin: 48px 0 24px;
@@ -249,7 +254,7 @@ h3 {
 
 p {
   font-size: 16px;
-  margin: 24px 0 0;
+  margin: 0 24px;
 }
 
 strong {
@@ -258,4 +263,9 @@ strong {
 
 a {
   text-decoration: underline;
+  color: #4d97e6;
+}
+
+li {
+  margin: 0 0 0 24px;
 }
