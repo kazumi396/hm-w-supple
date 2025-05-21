@@ -163,7 +163,7 @@ button {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  *font-size: 100%;
+  font-size: 100%;
   border-radius: 0;
   border: none;
   -moz-appearance: none;
