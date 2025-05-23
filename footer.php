@@ -75,6 +75,8 @@
             <span>〒123-4567 東京都渋谷区ABC</span>
         </div>
 
+        <p class="footer-disclaimer">※このWebサイトは、Hello Mentorの課題として制作した架空のカフェサイトです。</p>
+
         <small class="footer-copyright">&copy; 2024 SUPPLE</small>
     </div>
 </footer>
