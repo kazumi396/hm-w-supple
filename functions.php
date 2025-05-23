@@ -43,6 +43,21 @@ function my_editor_suport() {
 add_action( 'after_setup_theme', 'my_editor_suport' );
 
 /**
+ * MENU/SHOPLISTページの下層ページにアクセスしたら一覧にリダイレクト
+ */
+function redirect_custom_post_type() {
+	if ( is_singular( 'menu' ) ) {
+		wp_redirect( home_url( '/menu' ), 301 );
+		exit;
+	}
+	if ( is_singular( 'shoplist' ) ) {
+		wp_redirect( home_url( '/shoplist' ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'redirect_custom_post_type' );
+
+/**
 * セキュリティ対策
 */
 remove_action( 'wp_head', 'wp_generator' ); // WordPressのバージョン
