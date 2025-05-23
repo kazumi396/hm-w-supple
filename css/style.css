@@ -819,10 +819,17 @@ layout > footer
   display: block;
 }
 
+.footer-disclaimer {
+  margin-top: 32px;
+  font-size: 11px;
+  color: var(--color-font-white);
+  text-align: center;
+}
+
 .footer-copyright {
   font-family: var(--font-family-english);
   display: block;
-  margin-top: 64px;
+  margin-top: 32px;
   font-size: 12px;
   text-align: center;
 }
