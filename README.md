@@ -11,7 +11,7 @@ WordPress テーマとして動作するよう、静的な HTML から PHP へ�
 
 ## 公開 URL
 
-🔗 [https://kpeacemkm.sakura.ne.jp/portfolio/wp/supple/](https://kpeacemkm.sakura.ne.jp/portfolio/wp/supple/)
+🔗 [https://kpeacemkm.sakura.ne.jp/portfolio/supple/](https://kpeacemkm.sakura.ne.jp/portfolio/supple/)
 
 ## 使用技術
 
